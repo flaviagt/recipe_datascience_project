@@ -91,7 +91,12 @@ As seen from the distribution, most of the recipe's average ratings are 5 and ge
 
 ### 2C) Exploratory Data Analysis: Bivariate Analysis
 #### Recipe Duration vs. Average Rating 
-**PLOT**
+<iframe
+  src="assets/plot2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 As seen from the graph, most of boxes are high up. Remembering from the distribution of recipe average rating, most of them are in the 5-ratings. This means that in general, no matter the time needed to cook the recipe, there is general high rating for the recipes and distributed quite equally. 
 
 ### 2D) Interesting Aggregates
