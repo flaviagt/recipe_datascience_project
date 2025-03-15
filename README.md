@@ -68,19 +68,16 @@ Nutrition information in the form:\
 [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)] (PDV stands for “percentage of daily value")
 
 ### 2B) Exploratory Data Analysis: Univariate Analysis
-#### Univariate Analysis 1: Distribution of Recipe Average Ratings
-#### Univariate Analysis 2: Distribution of Number of Recipes Per User
-#### Univariate Analysis 3: Distribution of Recipe Ratings
+#### Distribution of Recipe Average Ratings
 
 ### 2C) Exploratory Data Analysis: Bivariate Analysis
-#### Bivariate Analysis 1: Average Rating vs. Number of recipes per user
-#### Bivariate Analysis 2: Recipe Duration vs. Average Rating 
+#### Recipe Duration vs. Average Rating 
 
 ### 2D) Interesting Aggregates
 Column to be grouped by is `contributor_id`\
 In continuation, it's grouped by again with `recipe_count_bin`
 
-## Step 3: Assessment of Missingness
+## PART 3: Assessment of Missingness
 These are the columns in the dataset with missing values:  
 `['name', 'description', 'user_id', 'date', 'rating', 'review', 'avg_rating']`  
 
@@ -123,4 +120,49 @@ OBSERVED TVD VALUE: 0.008775371248423168
 p-value is  0.308, which is greater than 0.05\
 Therefore, **fail to reject the null hypothesis** of "The missingness of ratings does NOT depend on the year that the recipe was submitted on"
 then we can conclude 'rating' is **MCAR**.
+
+#### Proportion of sodium (PDV) and Rating
+Null Hypothesis: The missingness of ratings does not depend on the proportion of sodium in the recipe\
+Alternate Hypothesis: The missingness of ratings depends on the proportion of sodium in the recipe
+
+Test Statistic: The absolute difference of mean in the proportion of the group without missing ratings\
+Significance Level:0.05
+
+**2 plots**
+Observed Statistic: 4.603758453968997\
+P-value: 0.0\
+
+P-value, which is 0, is smaller than 0.05\
+Therefore, reject the null.\
+The missingness of `rating` does depend on the `proportion of sodium`
+
+## PART 4: Hypothesis Testing
+Null Hypothesis: Number of recipe a contributors submitted does not the contributor's average rating\
+Alternative Hypothesis: Contributors with multiple submission have higher average rating per recipe.\
+Test Statistic: Difference in average rating between contributors with single and multiple recipes\
+\
+Significance level: 0.05\
+This number is used because it's the most common one and there is no risk of if hypothesis testing is not as intricate\
+
+**PLOT**
+
+The significance level (α) is 0.05, meaning we reject the null hypothesis if the p-value is less than 0.05.\
+Since p-value = 0.0 < 0.05, we **reject the null hypothesis**\
+
+There is strong statistical evidence that contributors with multiple submissions tend to receive higher average ratings than those with only one submission. This suggests that more experienced or frequent contributors tend to perform better in terms of ratings.
+
+## PART 5: Framing a Prediction Problem
+We're predicting the average rating of recipes, which will be a regression prediction problem.\ 
+This will not be a classification of 1,2,3,4,5 as the rating, but rather a continuous, becuase the average rating per-recipe will be used, not per user reiew/rating
+
+## PART 6: Baseline Model
+### BASELINE
+
+The 2 features (columns) that will be used to craft the base model are: 
+1. minutes
+2. calories
+
+for this base model, we will use only one row per recipe, because minutes and calories do not change per review. 
+
+RMSE is used as the metric. Because, it's built for the regression model's performance. We're not using the "normal" accuracy, F-1 score, ebcasue these metrics are used for classification prediction problems
 
