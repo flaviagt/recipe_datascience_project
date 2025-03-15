@@ -18,11 +18,11 @@ This dataset contains recipes and ratings from food.com.\
 It was originally scraped and used by the authors of a research paper titled, "Generating Personalized Recipes from Historical User Preferences" by Bodhisattwa Prasad Majumder, Shuyang Li, Jianmo Ni, Julian McAuley
 
 ### Understanding the Data sets
-1. **Recipe Data Set**
+1. **Recipe Data Set**\
 number of rows:  83782\
 number of columns:  12
 
-RECIPE DATASET COLUMN DETAILS  
+*RECIPE DATASET COLUMN DETAILS*
 | Column Name      | Description |
 |-----------------|-------------|
 | `name`         | Recipe name |
@@ -36,11 +36,11 @@ RECIPE DATASET COLUMN DETAILS
 | `steps`        | Text for recipe steps, in order |
 | `description`  | User-provided description |
    
-2. **Ratings Data Set**
-number of rows:  731927
+2. **Ratings Data Set**\
+number of rows:  731927\
 number of columns:  5
 
-RATING DATASET COLUMN DETAILS 
+*RATING DATASET COLUMN DETAILS*
 | Column Name    | Description        |
 |------------|--------------------|
 | `user_id`  | User ID            |
