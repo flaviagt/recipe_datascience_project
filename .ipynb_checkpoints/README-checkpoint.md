@@ -19,10 +19,10 @@ It was originally scraped and used by the authors of a research paper titled, "G
 
 ### Understanding the Data sets
 1. **Recipe Data Set**
-   number of rows:  83782\
-   number of columns:  12
+number of rows:  83782\
+number of columns:  12
 
-   RECIPE DATASET COLUMN DETAILS  
+RECIPE DATASET COLUMN DETAILS  
 | Column Name      | Description |
 |-----------------|-------------|
 | `name`         | Recipe name |
@@ -37,10 +37,10 @@ It was originally scraped and used by the authors of a research paper titled, "G
 | `description`  | User-provided description |
    
 2. **Ratings Data Set**
-   number of rows:  731927
-   number of columns:  5
+number of rows:  731927
+number of columns:  5
 
-   RATING DATASET COLUMN DETAILS 
+RATING DATASET COLUMN DETAILS 
 | Column Name    | Description        |
 |------------|--------------------|
 | `user_id`  | User ID            |
