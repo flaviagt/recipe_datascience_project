@@ -219,3 +219,21 @@ test rmse (base model):  0.6999782415603966
 It's not that significant of an improvement, but improvement is seen from the decrease of the test and train RMSE. 
 
 ##  Fairness Analysis
+2 Groups of choice: 
+- Older Recipes (posted from 2008- to 2009)
+- Newer Recipes (posted from 2010- to 2018)
+
+Note: 2009 was the median
+
+Evaluation Metric: RMSE
+
+Null Hypothesis:The model is fair, the precision for older and newer recipes  are roughly the same and any differences are due to random chance. \
+Alternative Hypothesis:The model is unfair, the precision for older recipe is lower than the precision for younger recipes
+
+test statistic: Difference of RMSE between the 2 groups
+significance level:  0.05 
+resulting p-value: 0
+conclusion:\
+p-value is lesser than 0.05\
+Therefore, reject the null hypothesis.\
+Hence, The model can be considered as unfair due to this analysis
