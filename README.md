@@ -81,7 +81,12 @@ Nutrition information in the form:\
 
 ### 2B) Exploratory Data Analysis: Univariate Analysis
 #### Distribution of Recipe Average Ratings
-**PLOT**
+<iframe
+  src="assets/plot1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 As seen from the distribution, most of the recipe's average ratings are 5 and generally decreases when the average rating decreases. 
 
 ### 2C) Exploratory Data Analysis: Bivariate Analysis
